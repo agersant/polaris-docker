@@ -17,6 +17,11 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v6
 
+      - name: Read .env file
+        uses: xom9ikk/dotenv@v2.4.0
+        with:
+          load-mode: strict
+
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
         with:
@@ -38,6 +43,9 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+        env:
+          ALPINE_VERSION: ${{ env.ALPINE_VERSION }}
+          POLARIS_VERSION: ${{ env.POLARIS_VERSION }}
 
       - name: Generate artifact attestation
         uses: actions/attest@v4
