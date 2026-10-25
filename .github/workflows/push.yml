@@ -43,9 +43,9 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-        env:
-          ALPINE_VERSION: ${{ env.ALPINE_VERSION }}
-          POLARIS_VERSION: ${{ env.POLARIS_VERSION }}
+          build-args: |
+            ALPINE_VERSION=${{ env.ALPINE_VERSION }}
+            POLARIS_VERSION=${{ env.POLARIS_VERSION }}
 
       - name: Generate artifact attestation
         uses: actions/attest@v4
