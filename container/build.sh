@@ -1,10 +1,4 @@
 #! /bin/sh
-#
-# build.sh
-# Copyright (C) 2018-2026 Óscar García Amor <ogarcia@connectical.com>
-#
-# Distributed under terms of the GNU GPLv3 license.
-#
 
 # upgrade
 apk -U --no-progress upgrade
@@ -23,7 +17,6 @@ source $HOME/.cargo/env
 POLARIS_WEB_DIR="/usr/share/polaris/web" \
   POLARIS_CONFIG_DIR="/var/lib/polaris" \
   POLARIS_DATA_DIR="/var/lib/polaris" \
-  POLARIS_DB_DIR="/var/lib/polaris" \
   POLARIS_LOG_DIR="/var/log/polaris" \
   POLARIS_CACHE_DIR="/var/cache/polaris" \
   POLARIS_PID_DIR="/tmp/polaris" \
