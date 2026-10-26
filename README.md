@@ -1,6 +1,6 @@
 # Polaris Docker
 
-This container packages [Polaris](https://github.com/agersant/polaris) under [Alpine Linux][https://alpinelinux.org/], a lightweight Linux distribution.
+This container packages [Polaris](https://github.com/agersant/polaris) under [Alpine Linux](https://alpinelinux.org/), a lightweight Linux distribution.
 
 [Published images on Docker Hub](https://hub.docker.com/r/agersant/polaris)
 
